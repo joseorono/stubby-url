@@ -26,9 +26,11 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@/*": ["./public/*"]
     }
   },
+  "typeRoots": ["./types", "./node_modules/@types"],
   "include": [
     ".eslintrc.cjs",
     "next-env.d.ts",
