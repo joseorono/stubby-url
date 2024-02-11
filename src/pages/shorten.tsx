@@ -2,9 +2,12 @@
 import { Input } from "~/components/ui/input"
 import { Button } from "~/components/ui/button"
 
+import PageLayout from "~/components/layout/PageLayout"
+
 export default function ShortenPage() {
   return (
     <>
+    <PageLayout>
       <div className="bg-gray-50/90 backdrop-blur-lg py-8 lg:py-12">
         <div className="container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10">
           <div className="space-y-3">
@@ -40,6 +43,7 @@ export default function ShortenPage() {
           </div>
         </div>
       </div>
+    </PageLayout>
     </>
   )
 }

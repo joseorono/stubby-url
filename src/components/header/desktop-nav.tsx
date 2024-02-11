@@ -15,7 +15,7 @@ export function DesktopNav() {
           Home
         </Link>
         <Link className="text-sm font-medium transition-colors hover:text-gray-900" href="/shorten">
-          Shorten
+          Shorten a URL
         </Link>
         <Link className="text-sm font-medium transition-colors hover:text-gray-900" href="/contact-us">
           Contact Us

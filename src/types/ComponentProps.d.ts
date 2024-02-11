@@ -1,6 +1,6 @@
 
 interface ILayoutComponentProps {
-    pageTitle: string,
+    pageTitle?: string,
     pageDescription?: string,
     children?: ReactNode
 }

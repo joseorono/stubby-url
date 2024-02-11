@@ -6,7 +6,7 @@ import { HamburgerMenuIcon }  from '@radix-ui/react-icons'
 
 export function MobileNav() {
   return (
-    <nav className="grid w-full min-h-[400px] border-t">
+    <nav className="md:hidden grid w-full min-h-[400px] border-t">
       <div className="md:hidden">
         <div>
           <Button className="fixed top-4 right-4 z-10" size="icon" variant="outline">
@@ -30,7 +30,7 @@ export function MobileNav() {
                 Home
               </Link>
               <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/shorten">
-                Shorten
+                Shorten a URL
               </Link>
               <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/contact-us">
                 Contact Us
