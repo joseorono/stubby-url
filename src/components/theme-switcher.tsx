@@ -8,9 +8,10 @@ import { useState, useEffect, useRef } from "react";
 
 export function ThemeSwitcher() {
   const defaultTheme = "light";
-  const themeStateRef = useRef(defaultTheme);
+  const initialTheme = (global?.window !== undefined) ? (localStorage.getItem("theme") || defaultTheme) : defaultTheme;
+  const themeStateRef = useRef(initialTheme);
   // use theme from local storage if available or set light theme
-  const [theme, setTheme] = useState<string>( defaultTheme );
+  const [theme, setTheme] = useState<string>( initialTheme );
 
   // update state on toggle
   const handleToggle = (e: React.ChangeEvent<HTMLInputElement> | null) => {
@@ -28,12 +29,13 @@ export function ThemeSwitcher() {
     // Light is the default theme
     const localTheme = localStorage.getItem("theme") || theme;
 
-    // add custom data-theme attribute to html tag required to update theme using DaisyUI
+    // add custom data-theme attribute to html tag required to update theme using DaisyUI and other libraries
     document.querySelector("html")?.setAttribute("data-theme", themeStateRef.current);
     // Set the theme as a class on the body
     document.body.className = themeStateRef.current;
 
     if (localTheme !== theme) {
+      localStorage?.setItem("theme", theme);
       setTheme(themeStateRef.current);
     }
       
