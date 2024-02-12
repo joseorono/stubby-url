@@ -5,3 +5,8 @@ interface ILayoutComponentProps {
     children?: ReactNode
 }
 
+
+interface PageTitleProps {
+    title: string;
+    description?: string;
+}
