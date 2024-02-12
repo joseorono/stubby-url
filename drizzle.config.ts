@@ -7,6 +7,9 @@ export default {
   driver: "mysql2",
   dbCredentials: {
     uri: env.DATABASE_URL,
+    port: 3306,
+    user: "root",
+    password: "",
   },
   tablesFilter: ["stubby-url_*"],
 } satisfies Config;
