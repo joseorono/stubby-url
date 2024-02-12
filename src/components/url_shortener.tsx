@@ -13,10 +13,10 @@ export function UrlShortenerForm(props: UrlShortenerFormProps) {
     return (
         <>
         
-        <div className="bg-gray-50/90 backdrop-blur-lg py-8 lg:py-12">
-        <div className="container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+        <div className="py-8">
+        <div className="container grid items-center gap-5 px-4 text-center p-2">
         
-          <div className="mx-auto max-w-sm space-y-2">
+          <div className="mx-auto max-w-sm space-y-1">
             <div className="flex rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800">
               <Input className="flex-1 min-w-0 rounded-lg" placeholder="Enter a URL" type="text" />
               <Button className="rounded-l-none" variant="default" size="icon">
@@ -29,9 +29,7 @@ export function UrlShortenerForm(props: UrlShortenerFormProps) {
             <Button className="w-full">Shorten URL</Button>
           </div>
         </div>
-      </div>
-      <div className="py-8">
-        <div className="container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+        <div className="flex items-center px-2 mt-12 mb-4">
           <div className="mx-auto max-w-sm space-y-2">
             <div className="flex rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800">
               <Input className="flex-1 min-w-0 rounded-lg" placeholder="Shortened URL" type="text" />
@@ -43,6 +41,7 @@ export function UrlShortenerForm(props: UrlShortenerFormProps) {
           </div>
         </div>
       </div>
+      
         </>
     )
     
