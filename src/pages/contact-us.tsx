@@ -6,15 +6,17 @@ import { Label } from "~/components/ui/label"
 import { Input } from "~/components/ui/input"
 import { Textarea } from "~/components/ui/textarea"
 import { Button } from "~/components/ui/button"
+import PageLayout from "~/components/layout/PageLayout"
+import ThinPageTitle from "~/components/header/thin-page-title"
 
 export default function ContactUsPage() {
   return (
-    <div className="container mx-auto max-w-[992px] w-full space-y-8">
-      <section className="py-12 md:py-24 lg:py-32">
-        <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold">Contact Us</h1>
-          <p className="text-gray-500 dark:text-gray-400">We'll get back to you as soon as possible.</p>
-        </div>
+    <PageLayout>
+    <ThinPageTitle title="Contact Us" description="We'll get back to you as soon as possible." />
+      
+    <div className="container mx-auto max-w-[768px] w-full space-y-8">
+      <section className="py-12 md:py-16">
+        
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -42,5 +44,6 @@ export default function ContactUsPage() {
         </div>
       </section>
     </div>
+    </PageLayout>
   )
 }

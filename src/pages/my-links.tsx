@@ -7,10 +7,13 @@ import { UrlShortenerForm } from "~/components/url_shortener"
 
 import { CopyIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
+import PageLayout from "~/components/layout/PageLayout"
 
 export default function MyLinksPage() {
   return (
     <>
+    <PageLayout>
+    
     <ThinPageTitle title="My Links" description="View and manage your shortened URLs." />
     <div className="">
       <UrlShortenerForm />
@@ -45,6 +48,8 @@ export default function MyLinksPage() {
         </div>
       </div>
     </div>
+      
+    </PageLayout>
     </>
   )
 }

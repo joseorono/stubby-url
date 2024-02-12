@@ -5,8 +5,8 @@ import SocialMediaIcons from "~/components/social-media"
 
 export default function PageFooter() {
   return (
-    <footer className="bg-gray-200">
-      <div className="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto  lg:justify-between">
+    <footer className="bg-gray-200 dark:bg-background">
+      <div className="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto max-w-screen-lg lg:justify-between">
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
             <li><Link href={"/"}>Home</Link></li>
