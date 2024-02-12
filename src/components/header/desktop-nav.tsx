@@ -4,6 +4,8 @@ import Link from "next/link"
 import { AvatarImage, AvatarFallback, Avatar } from "~/components/ui/avatar"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "~/components/ui/dropdown-menu"
 
+import { ThemeSwitcher } from "~/components/theme-switcher"
+
 export function DesktopNav() {
   return (
     <header className="flex items-center h-16 px-4 md:px-6 w-full border-b">
@@ -20,6 +22,9 @@ export function DesktopNav() {
         <Link className="text-sm font-medium transition-colors hover:text-gray-900" href="/contact-us">
           Contact Us
         </Link>
+      </div>
+      <div>
+        <ThemeSwitcher />
       </div>
       <div className="flex items-center gap-4 ml-auto">
         <DropdownMenu>
