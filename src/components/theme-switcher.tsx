@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 // https://dev.to/kunalukey/how-to-add-dark-mode-toggle-in-reactjs-tailwindcss-daisyui-1af9
 
 // https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite/
@@ -8,12 +8,15 @@ import { useState, useEffect } from "react";
 
 export function ThemeSwitcher() {
   const defaultTheme = "light";
+  const themeStateRef = useRef(defaultTheme);
   // use theme from local storage if available or set light theme
   const [theme, setTheme] = useState<string>( defaultTheme );
 
   // update state on toggle
   const handleToggle = (e: React.ChangeEvent<HTMLInputElement> | null) => {
-    setTheme( (theme === "light") ? "dark" : "light" );
+    const newState = (theme === "light") ? "dark" : "light";
+    themeStateRef.current = newState;
+    setTheme( newState );
   };
 
   // set theme state in localstorage on mount & also update localstorage on state change
@@ -26,12 +29,12 @@ export function ThemeSwitcher() {
     const localTheme = localStorage.getItem("theme") || theme;
 
     // add custom data-theme attribute to html tag required to update theme using DaisyUI
-    document.querySelector("html")?.setAttribute("data-theme", localTheme);
+    document.querySelector("html")?.setAttribute("data-theme", themeStateRef.current);
     // Set the theme as a class on the body
-    document.body.className = localTheme;
+    document.body.className = themeStateRef.current;
 
     if (localTheme !== theme) {
-      setTheme(localTheme);
+      setTheme(themeStateRef.current);
     }
       
   }
