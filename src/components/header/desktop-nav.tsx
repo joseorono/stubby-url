@@ -23,12 +23,12 @@ export function DesktopNav() {
           Contact Us
         </Link>
       </div>
-      <div>
+      <div className="mx-4">
         <ThemeSwitcher />
       </div>
       <div className="flex items-center gap-4 ml-auto">
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
+          <DropdownMenuTrigger className="hover:cursor-pointer" asChild>
             <Avatar className="h-9 w-9">
               <AvatarImage alt="@shadcn" src="/placeholder-avatar.jpg" />
               <AvatarFallback>JP</AvatarFallback>
@@ -36,10 +36,16 @@ export function DesktopNav() {
             </Avatar>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer">
+              Profile
+            </DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer">
+              Settings
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
+            <DropdownMenuItem className="hover:cursor-pointer">
+              Logout
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
