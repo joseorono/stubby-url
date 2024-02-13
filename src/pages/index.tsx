@@ -53,7 +53,7 @@ export default function HomePage() {
                   </Link>
                   ,&nbsp;
                   <Link className="underline" href="#">
-                    Drizzle
+                    Prisma
                   </Link>
                   ,&nbsp;
                   <Link className="underline" href="#">
