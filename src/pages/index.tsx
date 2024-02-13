@@ -124,7 +124,7 @@ function WindIcon(props:any) {
 }
 
 
-function DatabaseIcon(props) {
+function DatabaseIcon(props: any) {
   return (
     <svg
       {...props}
@@ -146,7 +146,7 @@ function DatabaseIcon(props) {
 }
 
 
-function BracesIcon(props) {
+function BracesIcon(props: any) {
   return (
     <svg
       {...props}
@@ -167,7 +167,7 @@ function BracesIcon(props) {
 }
 
 
-function LayoutGridIcon(props) {
+function LayoutGridIcon(props: any) {
   return (
     <svg
       {...props}
