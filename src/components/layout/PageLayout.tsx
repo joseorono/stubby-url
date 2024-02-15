@@ -17,15 +17,16 @@ const PageLayout:React.FC<ILayoutComponentProps> =
         <>
 
         <Seo title={pageTitle} description={pageDescription} />
+        <div className="page-container">
+            <DesktopNav />
+            <MobileNav />
         
-        <DesktopNav />
-        <MobileNav />
-    
-        <main>
-            {children}
-        </main>
+            <main>
+                {children}
+            </main>
 
-        <PageFooter />
+            <PageFooter />
+        </div>
 
         </>
     )
