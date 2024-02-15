@@ -10,3 +10,8 @@ interface PageTitleProps {
     title: string;
     description?: string;
 }
+
+interface IRedirectComponentProps {
+    urlCode: string;
+    targetUrl: string;
+}
