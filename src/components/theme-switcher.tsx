@@ -48,6 +48,7 @@ export function ThemeSwitcher() {
         <button className="btn btn-square btn-ghost">
             <label className="swap swap-rotate w-12 h-12">
             <input
+              className="sr-only"
                 type="checkbox"
                 onChange={handleToggle}
                 // show toggle image based on localstorage theme

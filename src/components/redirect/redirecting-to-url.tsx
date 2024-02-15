@@ -24,7 +24,7 @@ const RedirectNotice: React.FC<IRedirectComponentProps> = (
   return (
   <>
   <ThinPageTitle title="Redirecting..." description="Wait a moment." />
-    <div className="flex items-center justify-center w-full min-h-[50vh] flex-col space-y-2 p-6 text-center">
+    <div className="flex items-center justify-center w-full flex-col space-y-2 p-6 text-center">
         <div className="grid gap-2">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Redirecting</h1>
           <p className="text-gray-500 text-sm/relaxed dark:text-gray-400">
@@ -38,21 +38,7 @@ const RedirectNotice: React.FC<IRedirectComponentProps> = (
           </div>
           }
 
-          <CircularProgressbar
-              value={percentage}
-              text={`${percentage}%`}
-              background
-              backgroundPadding={6}
-              styles={buildStyles({
-                backgroundColor: "--var(--bg-primary)",
-                textColor: "#fff",
-                pathColor: "#fff",
-                trailColor: "transparent"
-              })}
-          />
-        
       </div>
-
     </div>
   </>
   );
