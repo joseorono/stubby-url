@@ -5,7 +5,9 @@ import {
   type DefaultSession,
   type NextAuthOptions,
 } from "next-auth";
+
 import DiscordProvider from "next-auth/providers/discord";
+import GitHubProvider from "next-auth/providers/github";
 
 import { env } from "~/env";
 import { db } from "~/server/db";
@@ -61,6 +63,10 @@ export const authOptions: NextAuthOptions = {
      *
      * @see https://next-auth.js.org/providers/github
      */
+    GitHubProvider({
+      clientId: env.GITHUB_ID,
+      clientSecret: env.GITHUB_SECRET
+    })
   ],
 };
 
